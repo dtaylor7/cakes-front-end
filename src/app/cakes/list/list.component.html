@@ -1,1 +1,7 @@
-<p>list works!</p>
+<table>
+  <tr *ngFor="let item of cakes">
+    <td><img src="{{ item.imageUrl }}" alt="{{ item.name }}"></td>
+    <td>{{ item.name }}</td>
+    <td><button>View</button></td>
+  </tr>
+</table>

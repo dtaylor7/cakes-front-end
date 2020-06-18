@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CakesService } from '../cakes.service';
+import { Cake } from '../cake';
 
 @Component({
   selector: 'app-list',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+  public cakes: Array<Cake>;
 
-  constructor() { }
+  constructor(public cakesService: CakesService) { }
 
   ngOnInit(): void {
+    this.cakesService.get().subscribe(data => {
+      this.cakes = data;
+      console.log(data)
+    });
   }
 
 }
