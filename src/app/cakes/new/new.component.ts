@@ -20,12 +20,12 @@ export class NewComponent implements OnInit {
       imageUrl: ['', Validators.required],
       comment: [''],
       yumFactor: ['', Validators.required],
-    })
+    });
   }
 
   save() {
     if (this.cake.valid) {
-      this.cakesService.create({ ...this.cake.value, yumFactor: +this.cake.value.yumFactor }).subscribe(res => {
+      this.cakesService.create(this.cake.value).subscribe(res => {
         this.router.navigateByUrl('');
       });
     } else {

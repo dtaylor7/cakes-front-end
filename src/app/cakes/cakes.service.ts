@@ -29,4 +29,8 @@ export class CakesService {
   create(cake): Observable<Cake> {
     return this.httpClient.post<Cake>(this.url, JSON.stringify(cake), this.httpOptions);
   }
+
+  update(cake): Observable<Cake> {
+    return this.httpClient.put<Cake>(this.url + cake.id, JSON.stringify(cake), this.httpOptions);
+  }
 }

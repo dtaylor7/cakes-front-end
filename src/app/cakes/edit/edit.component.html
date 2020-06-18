@@ -1,6 +1,7 @@
 <a routerLink= "/">Back to cakes</a>
 <br><br>
-<form [formGroup]="cake" (submit)="save()">
+<form [formGroup]="form" (submit)="save()">
+  <input formControlName="id" type="hidden" />
   <label>Name</label><br>
   <input formControlName="name" />
   <br><br>

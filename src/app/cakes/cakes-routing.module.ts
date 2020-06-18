@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
 import { NewComponent } from './new/new.component';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [{
   path: '',
@@ -10,6 +11,9 @@ const routes: Routes = [{
 },{
   path: 'cake/new',
   component: NewComponent
+},{
+  path: 'cake/:id/edit',
+  component: EditComponent
 },{
   path: 'cake/:id',
   component: DetailsComponent
