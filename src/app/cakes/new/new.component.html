@@ -1,0 +1,23 @@
+<a routerLink= "/">Back to cakes</a>
+<br><br>
+<form [formGroup]="cake" (submit)="save()">
+  <label>Name</label><br>
+  <input formControlName="name" />
+  <br><br>
+  <label>Comment</label><br>
+  <input formControlName="comment" />
+  <br><br>
+  <label>Image Url</label><br>
+  <input formControlName="imageUrl" />
+  <br><br>
+  <label>Yum Factor</label><br>
+  <select formControlName="yumFactor">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+  </select>
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
