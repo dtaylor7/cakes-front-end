@@ -13,9 +13,8 @@ export class ListComponent implements OnInit {
   constructor(public cakesService: CakesService) { }
 
   ngOnInit(): void {
-    this.cakesService.get().subscribe(data => {
+    this.cakesService.getAll().subscribe(data => {
       this.cakes = data;
-      console.log(data)
     });
   }
 

@@ -2,6 +2,6 @@
   <tr *ngFor="let item of cakes">
     <td><img src="{{ item.imageUrl }}" alt="{{ item.name }}"></td>
     <td>{{ item.name }}</td>
-    <td><button>View</button></td>
+    <td><a routerLink= "/cake/{{ item.id }}">View</a></td>
   </tr>
 </table>

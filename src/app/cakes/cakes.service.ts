@@ -12,7 +12,11 @@ export class CakesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  get(): Observable<Cake[]> {
+  getAll(): Observable<Cake[]> {
     return this.httpClient.get<Cake[]>(this.url)
+  }
+
+  get(id): Observable<Cake> {
+    return this.httpClient.get<Cake>(this.url + id)
   }
 }
